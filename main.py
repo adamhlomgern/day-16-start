@@ -1,7 +1,8 @@
-from turtle import Turtle, Screen
-timmy = Turtle()
-print(timmy)
+from prettytable import PrettyTable, MARKDOWN
 
-my_screen = Screen()
-print(my_screen.canvheight)
-my_screen.exitonclick()
+table = PrettyTable()
+
+table.set_style(MARKDOWN)
+table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
+table.add_column("Type", ["Electric", "Water", "Fire"])
+print(table)

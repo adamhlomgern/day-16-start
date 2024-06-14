@@ -1,8 +1,16 @@
-from prettytable import PrettyTable, MARKDOWN
+class User:
+    def __init__(self, user_id, username):
+        self.id = user_id
+        self.username = username
+        self.followers = 0
+        self.following = 0
 
-table = PrettyTable()
+    def follow(self, user):
+        user.followers += 1
+        selfl.following += 1
 
-table.set_style(MARKDOWN)
-table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
-table.add_column("Type", ["Electric", "Water", "Fire"])
-print(table)
+
+user_1 = User("001", "adam")
+user_2 = User("002", "manne")
+
+user_1.follow(user_2)
